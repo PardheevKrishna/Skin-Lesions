@@ -1,0 +1,9 @@
+# requirements.txt
+torch
+torchvision
+Pillow
+opencv-python
+scikit-image
+tensorflow
+numpy
+scikit-learn

@@ -1,0 +1,5 @@
+# Ignore models folder
+/models/
+
+# Ignore data folder
+/data/
