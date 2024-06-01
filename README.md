@@ -7,26 +7,39 @@ This project aims to classify skin lesions using a combination of CycleGAN for d
 skin_lesion_classification/
 │
 ├── data/
-│ ├── ISIC_2019_Training_Input/ # Contains all the images
-│ ├── ISIC_2019_Training_GroundTruth.csv # Ground truth labels
-│ └── ISIC_2019_Training_Metadata.csv # Metadata
-|
+│   ├── ISIC_2019_Training_Input/
+│   ├── ISIC_2019_Training_GroundTruth.csv
+│   ├── ISIC_2019_Training_Metadata.csv
+│   ├── augmented_images/
+│   ├── segmented_images/
+│   └── features.npy
+│
+├── notebooks/
+│   ├── data_augmentation.ipynb
+│   ├── preprocessing.ipynb
+│   ├── segmentation.ipynb
+│   ├── feature_extraction.ipynb
+│   └── classification.ipynb
+│
 ├── src/
-│ ├── init.py
-│ ├── data_augmentation.py # Script for CycleGAN data augmentation
-│ ├── preprocessing.py # Script for median and bilateral filtering
-│ ├── segmentation.py # Script for segmentation using UNet
-│ ├── feature_extraction.py # Script for GLCM, LBP, SIFT feature extraction
-│ └── classification.py # Script for classification using VGG16
+│   ├── __init__.py
+│   ├── data_augmentation.py
+│   ├── preprocessing.py
+│   ├── segmentation.py
+│   ├── feature_extraction.py
+│   ├── classification.py
+│   ├── cycle_gan_model.py
+│   └── unet_model.py
 │
 ├── models/
-│ ├── cyclegan_model.pth # Pretrained CycleGAN model
-│ ├── unet_model.pt # Pretrained UNet model
-│ └── vgg16_model.h5 # Pretrained VGG16 model
+│   ├── cyclegan_model.pth
+│   ├── unet_model.pt
+│   └── vgg16_model.h5
 │
-├── requirements.txt # Required packages and dependencies
-├── main.py # Main script to run the entire pipeline
-└── README.md # Project documentation
+├── requirements.txt
+├── main.py
+└── README.md
+
 
 
 ## Setup
